@@ -14,4 +14,9 @@ public class RetryDao {
         log.info("GG retry");
         throw new RuntimeException("GG" + RetrySynchronizationManager.getContext().getRetryCount());
     }
+
+    public void testRetry2(int number) throws RuntimeException {
+        log.info("GG2 retry");
+        throw new RuntimeException("G2:" + number + ":" + RetrySynchronizationManager.getContext().getRetryCount());
+    }
 }
